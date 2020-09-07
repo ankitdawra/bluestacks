@@ -1,0 +1,26 @@
+.home {
+  color: #394E76;
+
+  .main-wrapper {
+    > h1 {
+      margin: 1em 0;
+    }
+
+    .campaign-filters {
+      margin: 2em 0;
+
+      .nav-tabs {
+        .nav-link {
+          border: none;
+          color: inherit;
+
+          &.active {
+            border-bottom: 4px solid #85A71C;
+            color: #85A71C;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

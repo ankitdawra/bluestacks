@@ -1,0 +1,66 @@
+.campaign-table {
+  .table {
+    box-shadow: 0px 0px 6px 1px #eeeeee;
+
+    .table-row {
+      display: flex;
+      color: #394E76;
+
+      .item {
+        flex-basis: 13%;
+
+        &:nth-child(even) {
+          flex: 1
+        }
+      }
+    }
+
+    .table-header {
+      background: #F1F1F4;
+      padding: 10px 20px;
+
+      .item {
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+    }
+
+    .table-body {
+      padding: 10px 20px;
+
+      .table-row {
+        .item {
+          padding: 15px 0;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #eeeeee;
+        }
+
+        .campaign-name {
+          display: flex;
+
+          > img {
+            height: 50px;
+          }
+
+          .name {
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+          }
+        }
+
+        .actions {
+          display: flex;
+          align-items: flex-start;
+
+          > .action-item {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+}
