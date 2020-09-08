@@ -7,24 +7,23 @@ import { loadCampaigns } from '../../reducers/app/actions';
 
 import '../../styles/home.scss';
 
-class Home extends React.Component {
-  componentDidMount() {
-    this.props.loadCampaigns();
-  }
 
-  render() {
-    return (
-      <div className="home">
-        <div className="main-wrapper">
-          <h1>
-            Manage Campaigns
-          </h1>
-          <CampaignFilters/>
-          <CampaignTable/>
-        </div>
+function Home({loadCampaigns}) {
+  useEffect(() => {
+    loadCampaigns();
+  }, []);
+
+  return (
+    <div className="home">
+      <div className="main-wrapper">
+        <h1>
+          Manage Campaigns
+        </h1>
+        <CampaignFilters/>
+        <CampaignTable/>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 const mapStateToProps = ({appReducer}) => {

@@ -5,6 +5,8 @@
     .table-row {
       display: flex;
       color: #394E76;
+      align-items: center;
+      cursor: pointer;
 
       .item {
         flex-basis: 13%;
@@ -30,7 +32,12 @@
 
       .table-row {
         .item {
-          padding: 15px 0;
+          padding: 10px 0;
+
+          .meta {
+            font-style: italic;
+            font-size: 0.9em;
+          }
         }
 
         &:not(:last-child) {

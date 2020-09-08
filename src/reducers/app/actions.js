@@ -17,8 +17,6 @@ export const loadCampaigns = () => async dispatch => {
       campaignsById[campaign.id] = campaign;
       campaignIds.push(campaign.id)
     })
-    // console.log(campaignsById);
-    // console.log(campaignIds);
     
     dispatch({
       type: LOAD_CAMPAIGNS_SUCCESS,
@@ -35,7 +33,6 @@ export const loadCampaigns = () => async dispatch => {
 
 
 export const filterCampaigns = filterId => dispatch => {
-  // console.log(filterId);
   dispatch({
     type: ON_FILTER,
     filterId
@@ -43,8 +40,6 @@ export const filterCampaigns = filterId => dispatch => {
 }
 
 export const updateDate = (campaign, newDate) => dispatch => {
-  // Campaign.build(campaign);
-  // console.log(id, newDate);
   dispatch({
     type: UPDATE_DATE,
     id: campaign.id,

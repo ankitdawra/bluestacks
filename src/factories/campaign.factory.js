@@ -40,7 +40,7 @@ class Campaign {
   }
 
   _buildImagePath(i) {
-    return `./assets/Row Copy ${i}-Row/Thumb/Bitmap.png`;
+    return `./bluestacks/assets/Row Copy ${i}-Row/Thumb/Bitmap.png`;
   }  
 }
 

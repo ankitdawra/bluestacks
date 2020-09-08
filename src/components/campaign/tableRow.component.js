@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { connect } from 'react-redux';
 
 import { updateDate } from '../../reducers/app/actions';
 import DateTime from '../DateTime'
-import Campaign from '../../factories/campaign.factory';
-
+import Moment from 'react-moment';
+import { filterIds } from  '../../factories/filters.factory';
 
 const ref = React.createRef();
 
@@ -14,7 +14,7 @@ const ScheduleDate = React.forwardRef(({value, onClick}) => {
   return (
     <div className="pointer"
          onClick={onClick}>
-      <img src="./assets/Row Copy 0-Row/Group/calendar.png"
+      <img src={`${path}/Group/calendar.png`}
             height="20"
             className="half-breathing-space right-only"/>
       Schedule Again
@@ -22,12 +22,13 @@ const ScheduleDate = React.forwardRef(({value, onClick}) => {
   )
 })
 
+const path = `./bluestacks/assets/Row Copy 0-Row`;
+
 function TableRow({campaignId, updateDate, campaignsById, activeFilterId}) {
   const campaign = campaignsById[campaignId];
-  const dateUpdated = date => {
-    console.log(date);
+  const dateUpdated = React.useCallback((date) => {
     updateDate(campaign, date);
-  }
+  }, []);
 
   if (campaign && campaign.filterCateg == activeFilterId) {
     return (
@@ -37,6 +38,12 @@ function TableRow({campaignId, updateDate, campaignsById, activeFilterId}) {
             format={'MMM YYYY, DD'}
             value={campaign.createdOn}
           />
+          {campaign.filterCateg !== filterIds.LIVE && (
+            <div className="meta text-capitalize">
+              <Moment fromNow ago>{campaign.createdOn}</Moment>
+              {campaign.filterCateg === filterIds.PAST ? ' ago' : ' ahead'}
+            </div>
+          )}
         </div>
         <div className="item campaign-name">
           <img src={campaign.imageUrl}/>
@@ -46,20 +53,20 @@ function TableRow({campaignId, updateDate, campaignsById, activeFilterId}) {
           </div>
         </div>
         <div className="item">
-          <img src="./assets/Row Copy 0-Row/Group 4/Price.png"
+          <img src={`${path}/Group 4/Price.png`}
               height="20"
               className="half-breathing-space right-only"/>
           View Pricing
         </div>
         <div className="item actions">
           <div className="action-item">
-            <img src="./assets/Row Copy 0-Row/Group 3/file.png"
-                height="20"
-                className="half-breathing-space right-only"/>
+            <img src={`${path}/Group 3/file.png`}
+                 height="20"
+                 className="half-breathing-space right-only"/>
             CSV
           </div>
           <div className="action-item">
-            <img src="./assets/Row Copy 0-Row/Group 2/statistics-report.png"
+            <img src={`${path}/Group 2/statistics-report.png`}
                 height="20"
                 className="half-breathing-space right-only"/>
             Report
