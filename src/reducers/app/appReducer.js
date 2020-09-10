@@ -2,7 +2,7 @@ import { LOAD_CAMPAIGNS_START, LOAD_CAMPAIGNS_SUCCESS, ON_FILTER, UPDATE_DATE } 
 import Campaign from '../../factories/campaign.factory';
 
 const initialState = {
-  loading: false,
+  loadingCampaigns: false,
   campaigns: [],
   campaignsById: {},
 
@@ -14,13 +14,13 @@ function appReducer(state = initialState, action) {
     case LOAD_CAMPAIGNS_START:
       return {
         ...state,
-        loading: true
+        loadingCampaigns: true
       }
 
     case LOAD_CAMPAIGNS_SUCCESS:
       return {
         ...state,
-        loading: false,
+        loadingCampaigns: false,
         campaigns: [...action.campaignIds],
         campaignsById: action.campaignsById
       }

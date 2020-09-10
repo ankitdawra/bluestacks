@@ -1,3 +1,5 @@
+$nav-active-color: #85A71C;
+
 .home {
   color: #394E76;
 
@@ -15,9 +17,33 @@
           color: inherit;
 
           &.active {
-            border-bottom: 4px solid #85A71C;
-            color: #85A71C;
+            border-bottom: 4px solid $nav-active-color;
+            color: $nav-active-color;
             font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    margin-top: 70px;
+
+    .main-wrapper {
+      > h1 {
+        font-size: 1.3em;
+      }
+
+      .campaign-filters {
+        margin: 1em 0;
+
+        .nav-tabs {
+          .nav-link {
+            &.active {
+              border-bottom: 1px solid $nav-active-color;
+            }
           }
         }
       }

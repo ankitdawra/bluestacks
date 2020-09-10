@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Provider } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -11,12 +11,17 @@ import './factories/campaign.factory';
 import { data } from './services/campaign.service'
 
 function App() {
-  window.localStorage.setItem('campaignData', JSON.stringify(data));
+  useState(() => {
+    window.localStorage.setItem('campaignData', JSON.stringify(data));
+  })
+
   return (
     <Provider store={store}>
       <div className="app">
         <Header/>
-        <Home/>
+        <div className="app-container">
+          <Home/>
+        </div>
       </div>
     </Provider>
   );
