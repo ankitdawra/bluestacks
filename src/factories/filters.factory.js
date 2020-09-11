@@ -5,7 +5,7 @@ export const filterIds = Object.freeze({
 })
 
 export const filters = Object.freeze([
-  {label: 'Upcoming Campaigns', id: filterIds.UPCOMING},
-  {label: 'Live Campaigns', id: filterIds.LIVE},
-  {label: 'Past Campaigns', id: filterIds.PAST}
+  {label: 'UPCOMING_CAMPAIGNS', id: filterIds.UPCOMING},
+  {label: 'LIVE_CAMPAIGNS', id: filterIds.LIVE},
+  {label: 'PAST_CAMPAIGNS', id: filterIds.PAST}
 ])

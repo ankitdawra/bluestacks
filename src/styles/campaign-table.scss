@@ -8,7 +8,6 @@ $table-border-color: #eeeeee;
       display: flex;
       color: #394E76;
       align-items: center;
-      cursor: pointer;
 
       .item {
         flex-basis: 13%;
@@ -47,6 +46,10 @@ $table-border-color: #eeeeee;
           .meta {
             font-style: italic;
             font-size: 0.9em;
+          }
+
+          &.view-pricing {
+            cursor: pointer;
           }
         }
 

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 import CampaignFilters from '../campaign/campaignFilters.component';
 import CampaignTable from '../campaign/campaignTable.component';
@@ -9,6 +10,7 @@ import '../../styles/home.scss';
 
 
 function Home({loadCampaigns}) {
+  const { t } = useTranslation();
   useEffect(() => {
     loadCampaigns();
   }, []);
@@ -17,7 +19,7 @@ function Home({loadCampaigns}) {
     <div className="home">
       <div className="main-wrapper">
         <h1>
-          Manage Campaigns
+          {t('MANAGE_CAMPAIGNS')}
         </h1>
         <CampaignFilters/>
         <CampaignTable/>

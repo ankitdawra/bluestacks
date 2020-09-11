@@ -1,6 +1,7 @@
 import React from 'react';
 // import logo from '../../logo.png';
 import '../../styles/header.scss';
+import SwitchLanguage from '../translator/switchLanguage.component';
 
 function Header() {
   return (
@@ -10,6 +11,8 @@ function Header() {
              className="logo"
              alt="bluestacks"/>
       </div>
+
+      <SwitchLanguage/>
     </div>
   )
 }

@@ -5,8 +5,10 @@ import { connect } from 'react-redux';
 
 import TableRow from './tableRow.component';
 import '../../styles/campaign-table.scss';
+import { useTranslation } from 'react-i18next';
 
 function CampaignTable({ campaigns, activeFilterId, campaignsById, loadingCampaigns }) {
+  const {t} = useTranslation();
   const [hasItemsForActiveFilter, setItemsForActiveFilter] = useState(true);
   const [canShowTable, setShowTable] = useState(false);
 
@@ -36,10 +38,10 @@ function CampaignTable({ campaigns, activeFilterId, campaignsById, loadingCampai
           {campaigns.length && (
             <div className="table">
               <div className="table-header table-row">
-                <div className="item">Date</div>
-                <div className="item">Campaign</div>
-                <div className="item">View</div>
-                <div className="item">Actions</div>
+                <div className="item">{t('DATE')}</div>
+                <div className="item">{t('CAMPAIGN')}</div>
+                <div className="item">{t('VIEW')}</div>
+                <div className="item">{t('ACTIONS')}</div>
               </div>
               <div className="table-body">
                 {hasItemsForActiveFilter && campaigns.map((campaign, i) => (
@@ -48,7 +50,7 @@ function CampaignTable({ campaigns, activeFilterId, campaignsById, loadingCampai
                   )
                 )}
                 {!hasItemsForActiveFilter && (
-                  <div className="text-center">No active campaigns in this category.</div>
+                  <div className="text-center">{t('NO_ACTIVE_CAMPAIGNS')}</div>
                 )}
               </div>
             </div>

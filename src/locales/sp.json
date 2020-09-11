@@ -1,0 +1,21 @@
+{
+  "SELECT_LANGUAGE": "Seleccione el idioma",
+  "ENGLISH": "English",
+  "SPANISH": "Spanish",
+  "MANAGE_CAMPAIGNS": "Gestionar campañas",
+  "UPCOMING_CAMPAIGNS": "Próximas Campañas",
+  "LIVE_CAMPAIGNS": "Campañas en vivo",
+  "PAST_CAMPAIGNS": "Campañas pasadas",
+
+  "NO_ACTIVE_CAMPAIGNS": "No hay campañas activas en esta categoría.",
+  "NO_CAMPAIGNS": "Lo sentimos, no hay campañas disponibles.",
+  "DATE": "Fecha",
+  "CAMPAIGN": "Campaña",
+  "VIEW": "Ver",
+  "ACTIONS": "Comportamiento",
+  "PRICE": "Precio",
+  "CSV": "CSV",
+  "REPORT": "Reporte",
+  "VIEW_PRICING": "Ver precios",
+  "SCHEDULE_AGAIN": "Programar de nuevo"
+}

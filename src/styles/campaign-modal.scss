@@ -1,3 +1,31 @@
 .campaign-modal {
-  
+  .modal-content {
+    .modal-header {
+      .modal-title {
+        display: flex;
+
+        .name {
+          display: flex;
+          flex-direction: column;
+
+          > div:first-child {
+            flex: 1;
+          }
+
+          .meta {
+            font-size: 0.5em;
+
+            &:not(.date) {
+              font-style: italic;
+              text-transform: uppercase;
+            }
+          }
+
+          .date {
+            
+          }
+        }
+      }
+    }
+  }
 }

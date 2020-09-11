@@ -11,9 +11,7 @@ import './factories/campaign.factory';
 import { data } from './services/campaign.service'
 
 function App() {
-  useState(() => {
-    window.localStorage.setItem('campaignData', JSON.stringify(data));
-  })
+  window.localStorage.setItem('campaignData', JSON.stringify(data));
 
   return (
     <Provider store={store}>

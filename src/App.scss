@@ -14,21 +14,33 @@
       margin: auto;
     }
   }
+}
 
-  .meta {
-    color: gray;
-    font-size: 0.8em;
+.meta {
+  color: gray;
+  font-size: 0.8em;
+}
+
+.half-breathing-space {
+  &.left-only {
+    margin-left: 0.5em;
   }
 
-  .half-breathing-space {
-    &.right-only {
-      margin-right: 0.5em;
-    }
+  &.right-only {
+    margin-right: 0.5em;
   }
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .app {
+    .app-container {
+      margin-top: 60px;
+    }
+
     .header,
     .home {
       > .main-wrapper {

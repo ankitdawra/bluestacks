@@ -1,0 +1,21 @@
+{
+  "SELECT_LANGUAGE": "Select language",
+  "ENGLISH": "English",
+  "SPANISH": "Spanish",
+  "MANAGE_CAMPAIGNS": "Manage Campaigns",
+  "UPCOMING_CAMPAIGNS": "Upcoming Campaigns",
+  "LIVE_CAMPAIGNS": "Live Campaigns",
+  "PAST_CAMPAIGNS": "Past Campaigns",
+
+  "NO_ACTIVE_CAMPAIGNS": "No active campaigns in this category.",
+  
+  "DATE": "Date",
+  "CAMPAIGN": "Campaign",
+  "VIEW": "View",
+  "ACTIONS": "Actions",
+  "PRICE": "Price",
+  "CSV": "CSV",
+  "REPORT": "Report",
+  "VIEW_PRICING": "View Pricing",
+  "SCHEDULE_AGAIN": "Schedule Again"
+}
