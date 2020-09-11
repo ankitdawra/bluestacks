@@ -14,7 +14,7 @@ import { useTranslation } from 'react-i18next';
 const ref = React.createRef();
 
 
-const path = `./bluestacks/assets/Row Copy 0-Row`;
+const path = `${process.env.PUBLIC_URL}/assets/Row Copy 0-Row`;
 
 function TableRow({campaignId, updateDate, campaignsById, activeFilterId}) {
   const {t} = useTranslation();

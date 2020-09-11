@@ -7,7 +7,7 @@ function Header() {
   return (
     <div className="header">
       <div className="main-wrapper">
-        <img src="./bluestacks/logo.png"
+        <img src={`${process.env.PUBLIC_URL}/logo.png`}
              className="logo"
              alt="bluestacks"/>
       </div>

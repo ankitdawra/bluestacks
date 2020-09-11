@@ -56,7 +56,7 @@ function CampaignTable({ campaigns, activeFilterId, campaignsById, loadingCampai
             </div>
           )}
           {!campaigns.length && (
-            <div>Sorry, No campaigns available!</div>
+            <div>{t('NO_CAMPAIGNS')}</div>
           )}
         </div>
       )}
