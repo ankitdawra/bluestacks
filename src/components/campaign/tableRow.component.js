@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState, useRef } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { connect } from 'react-redux';
@@ -11,14 +11,12 @@ import ScheduleDate from './scheduleDate.component';
 import CampaignModal from './campaignModal.component';
 import { useTranslation } from 'react-i18next';
 
-const ref = React.createRef();
-
-
 const path = `${process.env.PUBLIC_URL}/assets/Row Copy 0-Row`;
 
 function TableRow({campaignId, updateDate, campaignsById, activeFilterId}) {
   const {t} = useTranslation();
   const campaign = campaignsById[campaignId];
+  const ref = useRef();
 
   const [openCampaign, setOpenCampaign] = useState(false);
 

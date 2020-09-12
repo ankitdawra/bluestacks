@@ -6,6 +6,7 @@ $nav-active-color: #85A71C;
   .main-wrapper {
     > h1 {
       margin: 1em 0;
+      font-weight: bold;
     }
 
     .campaign-filters {
@@ -15,6 +16,7 @@ $nav-active-color: #85A71C;
         .nav-link {
           border: none;
           color: inherit;
+          font-size: 1.1em;
 
           &.active {
             border-bottom: 4px solid $nav-active-color;
@@ -29,8 +31,6 @@ $nav-active-color: #85A71C;
 
 @media (max-width: 768px) {
   .home {
-    // margin-top: 70px;
-
     .main-wrapper {
       > h1 {
         font-size: 1.3em;

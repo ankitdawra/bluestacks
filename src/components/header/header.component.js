@@ -1,5 +1,4 @@
 import React from 'react';
-// import logo from '../../logo.png';
 import '../../styles/header.scss';
 import SwitchLanguage from '../translator/switchLanguage.component';
 

@@ -1,8 +1,6 @@
 import moment from 'moment';
 import  { filterIds } from './filters.factory';
 
-// const path = `./assets/Row Copy 0-Row/Thumb/Bitmap.png`;
-
 class Campaign {
   constructor({
     id,

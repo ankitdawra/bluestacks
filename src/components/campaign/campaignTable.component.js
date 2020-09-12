@@ -1,5 +1,3 @@
-// import Table from 'react-bootstrap/Table'
-
 import React, { useState, useEffect, useRef} from 'react';
 import { connect } from 'react-redux';
 
@@ -11,6 +9,7 @@ function CampaignTable({ campaigns, activeFilterId, campaignsById, loadingCampai
   const {t} = useTranslation();
   const [hasItemsForActiveFilter, setItemsForActiveFilter] = useState(true);
   const [canShowTable, setShowTable] = useState(false);
+  const tableRef = useRef();
 
   const campaignsLoaded = useRef();
   const prevCampaignsLoaded = campaignsLoaded.current;
@@ -29,6 +28,9 @@ function CampaignTable({ campaigns, activeFilterId, campaignsById, loadingCampai
       }
       setItemsForActiveFilter(false);
     }
+    if (tableRef && tableRef.current) {
+      tableRef.current.scrollLeft = 0;
+    }
   }, [campaignsById, activeFilterId]);
 
   return (
@@ -36,7 +38,8 @@ function CampaignTable({ campaigns, activeFilterId, campaignsById, loadingCampai
       {canShowTable && (
         <div className="campaign-table">
           {campaigns.length && (
-            <div className="table">
+            <div className="table"
+                 ref={tableRef}>
               <div className="table-header table-row">
                 <div className="item">{t('DATE')}</div>
                 <div className="item">{t('CAMPAIGN')}</div>
