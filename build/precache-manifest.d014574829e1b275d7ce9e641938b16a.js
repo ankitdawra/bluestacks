@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "775f3613d08697f44590f44fc90c3629",
+    "revision": "aa726bd12ffda7cedaf4f871c36064c7",
     "url": "/bluestacks/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bluestacks/static/css/2.2f73783b.chunk.css"
   },
   {
-    "revision": "6ada1987988fd02ded4f",
-    "url": "/bluestacks/static/css/main.991453dc.chunk.css"
+    "revision": "acbdd5504de79660792c",
+    "url": "/bluestacks/static/css/main.0993e88c.chunk.css"
   },
   {
     "revision": "c9c2662abcd142fe60f6",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bluestacks/static/js/2.59b6d956.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6ada1987988fd02ded4f",
-    "url": "/bluestacks/static/js/main.8a6d4af0.chunk.js"
+    "revision": "acbdd5504de79660792c",
+    "url": "/bluestacks/static/js/main.576d2e09.chunk.js"
   },
   {
     "revision": "257844a18dbab871af74",
