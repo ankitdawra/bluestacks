@@ -8,7 +8,7 @@ import '../../styles/campaign-modal.scss';
 function CampaignModal({handleClose, campaign}) {
   const { t } = useTranslation();
   return (
-    <Modal show={true} onHide={handleClose} dialogClassName="campaign-modal">
+    <Modal show={true} onHide={handleClose} dialogClassName="campaign-modal" centered>
       <Modal.Header closeButton>
         <Modal.Title>
           <img src={campaign.imageUrl}/>
